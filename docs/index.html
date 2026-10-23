@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axis Texture Lab — Next-Gen Native PBR Texture & Terrain Suite</title>
+  <meta name="description" content="Next-Gen Native PBR Texture, Normal Map & Procedural Terrain Suite for Game Developers & 3D Artists. Built with Rust + Tauri v2 + Three.js.">
+  <meta name="keywords" content="PBR, Texture Generator, Normal Map, Heightmap, Three.js, Tauri, Rust, Game Development, Texture Lab, Axis Tools">
+  <meta property="og:title" content="Axis Texture Lab">
+  <meta property="og:description" content="Next-Gen Native PBR Texture, Normal Map & Procedural Terrain Suite for Game Developers & 3D Artists.">
+  <meta property="og:image" content="assets/Axis Tools 2.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/Axis Texture Lab Icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="glow-sphere glow-1"></div>
+  <div class="glow-sphere glow-2"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-link">
+        <img src="assets/Axis Texture Lab Icon.png" alt="Axis Texture Lab Icon" class="brand-icon">
+        <span class="brand-name">Axis Texture Lab</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#comparison">Comparison</a>
+        <a href="#downloads">Downloads</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/MooPuu/axis-texture-lab" target="_blank" rel="noopener" class="btn btn-secondary btn-nav-icon" title="View Source on GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a href="#downloads" class="btn btn-primary">
+          <span>Get v2.0.0</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10l5 5 5-5M12 15V3"/><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Version 2.0.0 Available Now</span>
+        <span class="badge-pill">Native Rust</span>
+      </div>
+
+      <h1 class="hero-title">
+        The Next-Gen Native <br>
+        <span class="text-gradient">PBR Texture & Terrain</span> Suite
+      </h1>
+
+      <p class="hero-subtitle">
+        Turn any 2D image into complete, production-ready PBR material packages with instant real-time Three.js physical rendering and infinite procedural terrain synthesis. Engineered in Rust for blazingly fast native performance under 10 MB.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-windows-x64.exe" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10l5 5 5-5M12 15V3"/><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/></svg>
+          <span>Download for Windows</span>
+          <span class="btn-subtext">Standalone .exe • 9.2 MB</span>
+        </a>
+        <a href="#screenshots" class="btn btn-secondary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>Explore Features</span>
+        </a>
+      </div>
+
+      <!-- Hero App Preview Mockup -->
+      <div class="hero-preview-frame">
+        <div class="window-header">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="window-title">Axis Texture Lab — v2.0.0</div>
+          <div class="window-badge">Native Rust Backend</div>
+        </div>
+        <div class="window-body">
+          <img src="screenshots/3d-viewport.png" alt="Axis Texture Lab 3D Viewport" class="hero-mockup-img" id="heroImage">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Metrics Ribbon -->
+  <section class="stats-ribbon">
+    <div class="container stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">&lt; 10 MB</div>
+        <div class="stat-label">Lightweight Standalone Binary</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">8+ Maps</div>
+        <div class="stat-label">Full Physical PBR Material Suite</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">16-Bit HDR</div>
+        <div class="stat-label">Displacement & Heightmap Export</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">100% Offline</div>
+        <div class="stat-label">Zero Telemetry • Zero Cloud Lag</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Screenshot Showcase -->
+  <section class="section screenshots-section" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Preview</span>
+        <h2 class="section-title">Designed for Modern Game Developers</h2>
+        <p class="section-subtitle">A clean, dark-mode workspace packed with professional PBR baking, 3D orbiting, and procedural terrain generation.</p>
+      </div>
+
+      <!-- Showcase Tabs -->
+      <div class="showcase-tabs">
+        <button class="showcase-tab active" data-img="screenshots/map-generator.png" data-desc="Real-time multi-level normal, height, roughness, AO, specular, metallic, curvature, and slope map baking.">
+          <span>Map Studio</span>
+        </button>
+        <button class="showcase-tab" data-img="screenshots/3d-viewport.png" data-desc="Interactive Three.js physical PBR viewport with orbit controls, wireframe overlay, and multiple 3D geometries.">
+          <span>3D Viewport</span>
+        </button>
+        <button class="showcase-tab" data-img="screenshots/terrain-randomizer.png" data-desc="Procedural fractal terrain synthesizer with live 3D heightfield mesh and 1-click generator baking.">
+          <span>Terrain Randomizer</span>
+        </button>
+        <button class="showcase-tab" data-img="screenshots/lighting-controls.png" data-desc="Full manual lighting studio controls with Key, Fill, Ambient, and Rim sliders plus environment presets.">
+          <span>Lighting Studio</span>
+        </button>
+        <button class="showcase-tab" data-img="screenshots/settings-drawer.png" data-desc="Customization drawer with Dark, Light, Midnight, and Ocean themes, export resolutions, and preset manager.">
+          <span>Settings & Themes</span>
+        </button>
+      </div>
+
+      <!-- Showcase Screen Display -->
+      <div class="showcase-display">
+        <div class="display-container">
+          <img src="screenshots/map-generator.png" alt="Showcase Screen" id="showcaseImage" class="showcase-img">
+          <div class="showcase-overlay">
+            <span id="showcaseCaption">Real-time multi-level normal, height, roughness, AO, specular, metallic, curvature, and slope map baking.</span>
+            <button class="btn btn-sm btn-secondary" id="btnZoom">Click to Enlarge</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Grid -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Powerful Capabilities</span>
+        <h2 class="section-title">Everything You Need for PBR Authoring</h2>
+        <p class="section-subtitle">No subscriptions. No bloated runtimes. Just instant native tooling for game-ready materials.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3>Full PBR Map Extraction</h3>
+          <p>Extract Normal, Height, Ambient Occlusion, Specular, Roughness, Metallic, Curvature, and Slope maps simultaneously from any image.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3>Real-Time 3D Viewport</h3>
+          <p>Inspect materials instantly on Cube, Sphere, Plane, Cylinder, and Torus meshes with Three.js physical PBR shaders and wireframe mode.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Procedural Terrain Generator</h3>
+          <p>Generate infinite seed-based procedural landscapes with octave and persistence control. Use the 1-click bridge to bake terrain materials.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </div>
+          <h3>Studio & Custom Lighting</h3>
+          <p>Switch between Studio, Dramatic, and Outdoor presets or fine-tune Key, Fill, Ambient, and Rim lights in real-time with the lighting popover.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <h3>DirectX & OpenGL Formats</h3>
+          <p>Toggle normal map green channel inversion with a single click. Seamless compatibility for Unreal Engine, Unity, Godot, and Blender.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Seamless Seam Analysis</h3>
+          <p>Detect edge discrepancies automatically and inspect tileability across 1×1, 2×2, 3×3, and 4×4 repetitions before exporting to your game engine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture & Comparison Section -->
+  <section class="section comparison-section" id="comparison">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Engineered for Speed</span>
+        <h2 class="section-title">How Axis Texture Lab Compares</h2>
+        <p class="section-subtitle">Experience native Rust performance vs traditional legacy toolkits and heavy web wrappers.</p>
+      </div>
+
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th class="highlight-col">Axis Texture Lab (v2.0)</th>
+              <th>Electron-based Apps</th>
+              <th>Legacy Tools (CrazyBump / Materialize)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Binary Size</strong></td>
+              <td class="highlight-col"><strong>~9.2 MB</strong></td>
+              <td>150 MB – 300 MB</td>
+              <td>50 MB – 120 MB</td>
+            </tr>
+            <tr>
+              <td><strong>Startup Time</strong></td>
+              <td class="highlight-col"><strong>Instantaneous (&lt; 0.3s)</strong></td>
+              <td>2.5s – 5.0s</td>
+              <td>1.5s – 3.0s</td>
+            </tr>
+            <tr>
+              <td><strong>Memory Footprint</strong></td>
+              <td class="highlight-col"><strong>~45 MB Idle</strong></td>
+              <td>250 MB – 600 MB</td>
+              <td>150 MB – 300 MB</td>
+            </tr>
+            <tr>
+              <td><strong>Native OS Dialogs</strong></td>
+              <td class="highlight-col"><strong>Yes (Rust RFD)</strong></td>
+              <td>Chrome dialogs</td>
+              <td>Win32 / Custom</td>
+            </tr>
+            <tr>
+              <td><strong>Procedural Terrain</strong></td>
+              <td class="highlight-col"><strong>Live 3D Synthesizer</strong></td>
+              <td>No</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td><strong>16-bit HDR Export</strong></td>
+              <td class="highlight-col"><strong>Yes</strong></td>
+              <td>Limited</td>
+              <td>Partial</td>
+            </tr>
+            <tr>
+              <td><strong>Cost & Licensing</strong></td>
+              <td class="highlight-col"><strong>100% Free & Open Source (MIT)</strong></td>
+              <td>Varies</td>
+              <td>Paid / Abandoned</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Downloads Section -->
+  <section class="section downloads-section" id="downloads">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Production Ready</span>
+        <h2 class="section-title">Download Axis Texture Lab v2.0.0</h2>
+        <p class="section-subtitle">Choose your preferred installation format for Windows 10 & 11 (64-bit).</p>
+      </div>
+
+      <div class="downloads-grid">
+        <!-- Standalone Portable EXE -->
+        <div class="download-card featured">
+          <div class="card-badge">Most Popular</div>
+          <div class="download-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3>Standalone Portable</h3>
+          <p class="download-desc">Zero installation required. Single `.exe` with all assets embedded. Run from USB or any folder.</p>
+          <div class="download-meta">
+            <span>Size: ~9.2 MB</span>
+            <span>Version: 2.0.0</span>
+          </div>
+          <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-windows-x64.exe" class="btn btn-primary btn-block">
+            Download Portable EXE
+          </a>
+        </div>
+
+        <!-- Portable ZIP Package -->
+        <div class="download-card">
+          <div class="download-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>Portable ZIP Package</h3>
+          <p class="download-desc">Unpacked portable distribution including the executable, high-resolution icons, and quick-start guide.</p>
+          <div class="download-meta">
+            <span>Size: ~2.9 MB</span>
+            <span>Version: 2.0.0</span>
+          </div>
+          <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-windows-portable.zip" class="btn btn-secondary btn-block">
+            Download Portable ZIP
+          </a>
+        </div>
+
+        <!-- Standard NSIS Setup -->
+        <div class="download-card">
+          <div class="download-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Windows Setup (NSIS)</h3>
+          <p class="download-desc">Standard Windows installer with Start Menu shortcuts, Desktop icon, and a clean uninstaller.</p>
+          <div class="download-meta">
+            <span>Size: ~2.2 MB</span>
+            <span>Version: 2.0.0</span>
+          </div>
+          <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-setup.exe" class="btn btn-secondary btn-block">
+            Download Setup Installer
+          </a>
+        </div>
+
+        <!-- Enterprise MSI Package -->
+        <div class="download-card">
+          <div class="download-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Enterprise MSI Package</h3>
+          <p class="download-desc">Windows Installer (.msi) package designed for corporate deployment, Intune, and silent installs.</p>
+          <div class="download-meta">
+            <span>Size: ~3.3 MB</span>
+            <span>Version: 2.0.0</span>
+          </div>
+          <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-x64.msi" class="btn btn-secondary btn-block">
+            Download MSI Package
+          </a>
+        </div>
+      </div>
+
+      <div class="system-reqs">
+        <p><strong>System Requirements:</strong> 64-bit Windows 10 or 11 with Microsoft Edge WebView2 (included by default on Windows 10 build 2004+ and all Windows 11 PCs).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <img src="" alt="Enlarged screenshot" id="lightboxImg">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <img src="assets/Axis Tools 2.png" alt="Axis Tools" class="footer-brand-logo">
+        <p class="footer-tagline">The Open Source Game-Dev Stack • Made by Mahdi Kareem &copy; 2026</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/MooPuu/axis-texture-lab" target="_blank" rel="noopener">GitHub Repository</a>
+        <a href="https://github.com/MooPuu/axis-texture-lab/releases/tag/v2.0.0" target="_blank" rel="noopener">v2.0.0 Release</a>
+        <a href="https://github.com/MooPuu/axis-texture-lab/issues" target="_blank" rel="noopener">Report an Issue</a>
+        <a href="https://github.com/MooPuu/axis-texture-lab/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
