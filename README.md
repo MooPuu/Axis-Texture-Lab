@@ -7,11 +7,16 @@
 **Next-Gen Native PBR Texture, Normal Map & Procedural Terrain Suite**
 
 [![Platform: Windows](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D6?logo=windows&logoColor=white)](https://github.com/MooPuu/axis-texture-lab)
+[![Official Website](https://img.shields.io/badge/Website-moopuu.github.io%2Faxis--texture--lab-10b981?logo=googlechrome&logoColor=white)](https://moopuu.github.io/axis-texture-lab/)
 [![Built with: Rust](https://img.shields.io/badge/Backend-Rust-DEA584?logo=rust&logoColor=white)](https://www.rust-lang.org)
 [![Framework: Tauri v2](https://img.shields.io/badge/Framework-Tauri%20v2-24C8D8?logo=tauri&logoColor=white)](https://tauri.app)
 [![3D Engine: Three.js](https://img.shields.io/badge/3D%20Engine-Three.js-black?logo=three.js&logoColor=white)](https://threejs.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version: 2.0.0](https://img.shields.io/badge/Release-v2.0.0-success.svg)](https://github.com/MooPuu/axis-texture-lab/releases/tag/v2.0.0)
+
+<p align="center">
+  <a href="https://moopuu.github.io/axis-texture-lab/" target="_blank"><strong>🌐 Visit Official Website & Interactive Showcase</strong></a>
+</p>
 
 <p align="center">
   <img src="Axis%20Texture%20Lab%20Icon.png" alt="Axis Texture Lab Icon" width="128" />
