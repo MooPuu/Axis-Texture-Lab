@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "blender": {
+      "command": "C:\\blender_mcp\\mcp\\.venv\\Scripts\\blender-mcp.exe",
+      "args": [],
+      "env": {
+        "BLENDER_MCP_HOST": "localhost",
+        "BLENDER_MCP_PORT": "9876"
+      }
+    },
+    "context7": {
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\pc\\Documents"
+      ]
+    },
+    "midbrain-memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "midbrain-memory-mcp@latest"
+      ]
+    }
+  }
+}
