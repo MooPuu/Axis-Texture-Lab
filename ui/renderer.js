@@ -46,7 +46,7 @@
     dom.dropZone = $('#dropZone'); dom.fileInput = $('#fileInput');
     dom.dropZoneContent = $('#dropZoneContent'); dom.inputPreview = $('#inputPreview');
     dom.inputImage = $('#inputImage'); dom.fileName = $('#fileName'); dom.fileSize = $('#fileSize');
-    dom.btnRemoveTexture = $('#btnRemoveTexture');
+    dom.btnRemoveTexture = $('#btnRemoveTexture'); dom.btnLoadDemo = $('#btnLoadDemo');
     dom.btnGenerate = $('#btnGenerate'); dom.btnExport = $('#btnExport');
     dom.btnBatch = $('#btnBatch'); dom.batchInput = $('#batchInput');
     dom.generatorSidebar = $$('.generator-sidebar');
@@ -634,6 +634,74 @@
     if (window.preview3d) window.preview3d.clearTextures();
     dom.preview3dEmpty.style.display = '';
     syncAdjustmentControls();
+  }
+
+  async function loadDemoTexture() {
+    try {
+      let resp = await fetch('assets/demo-brick.webp').catch(() => null);
+      if (!resp || !resp.ok) {
+        resp = await fetch('assets/demo-brick.png').catch(() => null);
+      }
+      if (resp && resp.ok) {
+        const blob = await resp.blob();
+        const file = new File([blob], 'demo_brick_wall.webp', { type: 'image/webp' });
+        await loadTexture(file, 'assets/demo-brick.webp', { addToRecent: false });
+        return;
+      }
+    } catch (_) {}
+
+    try {
+      const img = new Image();
+      img.onload = () => {
+        const c = document.createElement('canvas');
+        c.width = img.naturalWidth || img.width;
+        c.height = img.naturalHeight || img.height;
+        const ctx = c.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+        c.toBlob(async (blob) => {
+          if (blob) {
+            const file = new File([blob], 'demo_brick_wall.png', { type: 'image/png' });
+            await loadTexture(file, 'assets/demo-brick.png', { addToRecent: false });
+          }
+        }, 'image/png');
+      };
+      img.src = 'assets/demo-brick.webp';
+    } catch (e) {
+      console.warn('Could not load demo texture:', e);
+    }
+  }
+
+  async function checkScreenshotTrigger() {
+    try {
+      let text = '';
+      if (window.electronAPI && window.electronAPI.fs) {
+        let buf = await window.electronAPI.fs.readFile('target_tab.txt').catch(() => null);
+        if (!buf || buf.byteLength === 0) {
+          buf = await window.electronAPI.fs.readFile('publish/target_tab.txt').catch(() => null);
+        }
+        if (buf && buf.byteLength > 0) {
+          text = new TextDecoder().decode(buf).trim().toLowerCase();
+        }
+      }
+      if (!text) {
+        const p = new URLSearchParams(window.location.search);
+        text = p.get('tab') || (p.get('settings') ? 'settings' : '') || (p.get('lighting') ? 'lighting' : '');
+      }
+
+      if (text === '3d') {
+        setActiveTab('3d');
+      } else if (text === 'randomizer') {
+        setActiveTab('randomizer');
+      } else if (text === 'lighting') {
+        setActiveTab('3d');
+        setTimeout(() => { dom.btnLighting?.click(); }, 350);
+      } else if (text === 'settings') {
+        setActiveTab('maps');
+        setTimeout(() => { dom.btnSettings?.click(); }, 350);
+      } else if (text === 'maps') {
+        setActiveTab('maps');
+      }
+    } catch (_) {}
   }
 
   function formatFileSize(bytes) {
@@ -3023,6 +3091,10 @@
     });
 
     dom.btnRemoveTexture.addEventListener('click', removeTexture);
+    dom.btnLoadDemo?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      loadDemoTexture();
+    });
     dom.btnGenerate.addEventListener('click', generateMaps);
 
     // Slider live updates
@@ -3372,10 +3444,12 @@
 
     // preview3d initialises on the same DOMContentLoaded tick; re-apply the
     // persisted 3D presets once its lights and material exist.
-    setTimeout(() => {
+    setTimeout(async () => {
       applyMaterialPreset(dom.materialPreset.value);
       applyLightingSettings();
-    }, 0);
+      await loadDemoTexture();
+      await checkScreenshotTrigger();
+    }, 100);
 
     if (typeof THREE === 'undefined') {
       dom.tabBtns.forEach(btn => {
