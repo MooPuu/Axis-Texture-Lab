@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="Axis%20Tools%202.png" alt="Axis Tools" width="340" style="margin-bottom: 16px;" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/Axis%20Tools%20Dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="docs/assets/Axis%20Tools%202.png">
+  <img alt="Axis Tools" src="docs/assets/Axis%20Tools%202.png" width="340" style="margin-bottom: 16px;" />
+</picture>
 
 # Axis Texture Lab
 
@@ -19,7 +23,7 @@
 </p>
 
 <p align="center">
-  <img src="Axis%20Texture%20Lab%20Icon.png" alt="Axis Texture Lab Icon" width="128" />
+  <img src="docs/assets/logo.png" alt="Axis Texture Lab Icon" width="128" />
 </p>
 
 *A blazingly fast, lightweight, and modern desktop application designed for game developers, 3D artists, and environment designers. Generate high-quality PBR map sets and procedural terrain heightmaps with instant real-time 3D feedback.*
