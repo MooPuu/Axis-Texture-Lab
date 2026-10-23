@@ -6,7 +6,7 @@
 
 **Next-Gen Native PBR Texture, Normal Map & Procedural Terrain Suite**
 
-[![Platform: Windows](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D6?logo=windows&logoColor=white)](https://github.com/MooPuu/axis-texture-lab)
+[![Platform: Windows • macOS • Linux](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-0078D6?logo=apple&logoColor=white)](https://github.com/MooPuu/axis-texture-lab/releases/tag/v2.0.0)
 [![Official Website](https://img.shields.io/badge/Website-moopuu.github.io%2Faxis--texture--lab-10b981?logo=googlechrome&logoColor=white)](https://moopuu.github.io/axis-texture-lab/)
 [![Built with: Rust](https://img.shields.io/badge/Backend-Rust-DEA584?logo=rust&logoColor=white)](https://www.rust-lang.org)
 [![Framework: Tauri v2](https://img.shields.io/badge/Framework-Tauri%20v2-24C8D8?logo=tauri&logoColor=white)](https://tauri.app)
@@ -69,8 +69,9 @@ Transform any 2D diffuse/albedo texture into a complete, game-ready PBR material
 
 ## 🚀 Downloads & Installation
 
-Pre-built binaries for **Windows 10 / 11 (64-bit)** are available on the [v2.0.0 Release Page](https://github.com/MooPuu/axis-texture-lab/releases/tag/v2.0.0):
+Cross-platform release packages for **Windows**, **macOS**, and **Linux** are available on the [v2.0.0 Release Page](https://github.com/MooPuu/axis-texture-lab/releases/tag/v2.0.0):
 
+### 🪟 Windows (10 & 11, 64-bit)
 | Package | Description | Download | Size |
 |---|---|---|---|
 | **Standalone Portable** | Zero installation required. Run directly. | [**AxisTextureLab-v2.0.0-windows-x64.exe**](https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-windows-x64.exe) | ~9.2 MB |
@@ -78,7 +79,20 @@ Pre-built binaries for **Windows 10 / 11 (64-bit)** are available on the [v2.0.0
 | **Standard Installer (NSIS)** | Desktop & Start Menu shortcuts, clean uninstaller. | [**AxisTextureLab-v2.0.0-setup.exe**](https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-setup.exe) | ~2.2 MB |
 | **Enterprise Installer (MSI)** | Windows Installer package. | [**AxisTextureLab-v2.0.0-x64.msi**](https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-x64.msi) | ~3.3 MB |
 
-> **Prerequisite:** Microsoft Edge WebView2 Runtime (preinstalled on Windows 10 version 2004+ and all Windows 11 systems).
+### 🍎 macOS (Apple Silicon & Intel)
+| Package | Description | Download | Size |
+|---|---|---|---|
+| **Universal DMG Package** | Drag-and-drop installer for Apple Silicon (M1-M4) & Intel Macs. | [**AxisTextureLab-v2.0.0-macos-universal.dmg**](https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-macos-universal.dmg) | ~8.5 MB |
+| **App Bundle Tarball** | Compressed `.app` application archive. | [**AxisTextureLab-v2.0.0-macos-universal.app.tar.gz**](https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-macos-universal.app.tar.gz) | ~7.8 MB |
+
+### 🐧 Linux (x86_64)
+| Package | Description | Download | Size |
+|---|---|---|---|
+| **Universal AppImage** | Portable executable. Runs on all major Linux distributions. | [**AxisTextureLab-v2.0.0-linux-x86_64.AppImage**](https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-linux-x86_64.AppImage) | ~9.0 MB |
+| **Debian / Ubuntu Package** | Native `.deb` package installer. | [**AxisTextureLab-v2.0.0-linux-amd64.deb**](https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-linux-amd64.deb) | ~3.1 MB |
+| **Binary Tarball** | Standalone Linux executable bundle. | [**AxisTextureLab-v2.0.0-linux-x86_64.tar.gz**](https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-linux-x86_64.tar.gz) | ~2.8 MB |
+
+> **System Requirements:** Windows 10/11 with WebView2 • macOS 11.0+ (Big Sur or newer) • 64-bit Linux with WebKit2GTK 4.1.
 
 ---
 

@@ -70,10 +70,10 @@
       </p>
 
       <div class="hero-cta-group">
-        <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-windows-x64.exe" class="btn btn-primary btn-lg">
+        <a href="#downloads" class="btn btn-primary btn-lg">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10l5 5 5-5M12 15V3"/><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/></svg>
-          <span>Download for Windows</span>
-          <span class="btn-subtext">Standalone .exe • 9.2 MB</span>
+          <span>Download v2.0.0</span>
+          <span class="btn-subtext">Windows • macOS • Linux</span>
         </a>
         <a href="#screenshots" class="btn btn-secondary btn-lg">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -295,80 +295,202 @@
   <section class="section downloads-section" id="downloads">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Production Ready</span>
+        <span class="section-tag">Cross-Platform • Native Rust</span>
         <h2 class="section-title">Download Axis Texture Lab v2.0.0</h2>
-        <p class="section-subtitle">Choose your preferred installation format for Windows 10 & 11 (64-bit).</p>
+        <p class="section-subtitle">Select your operating system. Built natively for maximum performance and low memory footprint.</p>
       </div>
 
-      <div class="downloads-grid">
-        <!-- Standalone Portable EXE -->
-        <div class="download-card featured">
-          <div class="card-badge">Most Popular</div>
-          <div class="download-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+      <!-- Platform Selector Tabs -->
+      <div class="platform-tabs" role="tablist">
+        <button class="platform-tab active" data-platform="windows" role="tab" aria-selected="true" id="tab-btn-windows">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.802"/></svg>
+          <span>Windows</span>
+          <span class="tab-badge">x64</span>
+        </button>
+        <button class="platform-tab" data-platform="macos" role="tab" aria-selected="false" id="tab-btn-macos">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.63-.77 1.06-1.84.94-2.92-.92.04-2.02.62-2.67 1.39-.58.67-1.08 1.76-.94 2.81 1.03.08 2.05-.53 2.67-1.28z"/></svg>
+          <span>macOS</span>
+          <span class="tab-badge">Universal</span>
+        </button>
+        <button class="platform-tab" data-platform="linux" role="tab" aria-selected="false" id="tab-btn-linux">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.002 0c-2.489 0-4.5 2.011-4.5 4.5 0 .285.03.563.083.832C5.03 6.386 3.5 8.784 3.5 11.5c0 1.968.804 3.755 2.11 5.048C4.542 17.702 3 19.78 3 22.2c0 .442.358.8.8.8h16.4c.442 0 .8-.358.8-.8 0-2.42-1.542-4.498-2.61-5.652 1.306-1.293 2.11-3.08 2.11-5.048 0-2.716-1.53-5.114-4.083-6.168.053-.269.083-.547.083-.832 0-2.489-2.011-4.5-4.5-4.5zm0 2c1.381 0 2.5 1.119 2.5 2.5 0 .341-.073.666-.201.963-.736-.3-1.503-.463-2.299-.463s-1.563.163-2.299.463c-.128-.297-.201-.622-.201-.963 0-1.381 1.119-2.5 2.5-2.5z"/></svg>
+          <span>Linux</span>
+          <span class="tab-badge">x86_64</span>
+        </button>
+      </div>
+
+      <!-- Platform Panel: Windows -->
+      <div class="platform-panel active" id="panel-windows" role="tabpanel">
+        <div class="downloads-grid">
+          <!-- Standalone Portable EXE -->
+          <div class="download-card featured">
+            <div class="card-badge">Most Popular</div>
+            <div class="download-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </div>
+            <h3>Standalone Portable</h3>
+            <p class="download-desc">Zero installation required. Single `.exe` with all assets embedded. Run from USB or any folder.</p>
+            <div class="download-meta">
+              <span>Size: ~9.2 MB</span>
+              <span>Windows 10 / 11</span>
+            </div>
+            <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-windows-x64.exe" class="btn btn-primary btn-block">
+              Download Portable EXE
+            </a>
           </div>
-          <h3>Standalone Portable</h3>
-          <p class="download-desc">Zero installation required. Single `.exe` with all assets embedded. Run from USB or any folder.</p>
-          <div class="download-meta">
-            <span>Size: ~9.2 MB</span>
-            <span>Version: 2.0.0</span>
+
+          <!-- Portable ZIP Package -->
+          <div class="download-card">
+            <div class="download-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3>Portable ZIP Package</h3>
+            <p class="download-desc">Unpacked portable distribution including the executable, high-resolution icons, and quick-start guide.</p>
+            <div class="download-meta">
+              <span>Size: ~2.9 MB</span>
+              <span>Windows 10 / 11</span>
+            </div>
+            <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-windows-portable.zip" class="btn btn-secondary btn-block">
+              Download Portable ZIP
+            </a>
           </div>
-          <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-windows-x64.exe" class="btn btn-primary btn-block">
-            Download Portable EXE
-          </a>
+
+          <!-- Standard NSIS Setup -->
+          <div class="download-card">
+            <div class="download-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Windows Setup (NSIS)</h3>
+            <p class="download-desc">Standard Windows installer with Start Menu shortcuts, Desktop icon, and a clean uninstaller.</p>
+            <div class="download-meta">
+              <span>Size: ~2.2 MB</span>
+              <span>Windows 10 / 11</span>
+            </div>
+            <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-setup.exe" class="btn btn-secondary btn-block">
+              Download Setup Installer
+            </a>
+          </div>
+
+          <!-- Enterprise MSI Package -->
+          <div class="download-card">
+            <div class="download-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Enterprise MSI Package</h3>
+            <p class="download-desc">Windows Installer (.msi) package designed for corporate deployment, Intune, and silent installs.</p>
+            <div class="download-meta">
+              <span>Size: ~3.3 MB</span>
+              <span>Windows 10 / 11</span>
+            </div>
+            <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-x64.msi" class="btn btn-secondary btn-block">
+              Download MSI Package
+            </a>
+          </div>
         </div>
 
-        <!-- Portable ZIP Package -->
-        <div class="download-card">
-          <div class="download-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-          </div>
-          <h3>Portable ZIP Package</h3>
-          <p class="download-desc">Unpacked portable distribution including the executable, high-resolution icons, and quick-start guide.</p>
-          <div class="download-meta">
-            <span>Size: ~2.9 MB</span>
-            <span>Version: 2.0.0</span>
-          </div>
-          <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-windows-portable.zip" class="btn btn-secondary btn-block">
-            Download Portable ZIP
-          </a>
-        </div>
-
-        <!-- Standard NSIS Setup -->
-        <div class="download-card">
-          <div class="download-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h3>Windows Setup (NSIS)</h3>
-          <p class="download-desc">Standard Windows installer with Start Menu shortcuts, Desktop icon, and a clean uninstaller.</p>
-          <div class="download-meta">
-            <span>Size: ~2.2 MB</span>
-            <span>Version: 2.0.0</span>
-          </div>
-          <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-setup.exe" class="btn btn-secondary btn-block">
-            Download Setup Installer
-          </a>
-        </div>
-
-        <!-- Enterprise MSI Package -->
-        <div class="download-card">
-          <div class="download-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3>Enterprise MSI Package</h3>
-          <p class="download-desc">Windows Installer (.msi) package designed for corporate deployment, Intune, and silent installs.</p>
-          <div class="download-meta">
-            <span>Size: ~3.3 MB</span>
-            <span>Version: 2.0.0</span>
-          </div>
-          <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-x64.msi" class="btn btn-secondary btn-block">
-            Download MSI Package
-          </a>
+        <div class="system-reqs">
+          <p><strong>Windows Requirements:</strong> 64-bit Windows 10 (version 1809+) or Windows 11 with Microsoft Edge WebView2 (preinstalled on modern Windows PCs).</p>
         </div>
       </div>
 
-      <div class="system-reqs">
-        <p><strong>System Requirements:</strong> 64-bit Windows 10 or 11 with Microsoft Edge WebView2 (included by default on Windows 10 build 2004+ and all Windows 11 PCs).</p>
+      <!-- Platform Panel: macOS -->
+      <div class="platform-panel" id="panel-macos" role="tabpanel">
+        <div class="downloads-grid-wide">
+          <!-- Universal DMG Package -->
+          <div class="download-card featured">
+            <div class="card-badge">Recommended</div>
+            <div class="download-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.63-.77 1.06-1.84.94-2.92-.92.04-2.02.62-2.67 1.39-.58.67-1.08 1.76-.94 2.81 1.03.08 2.05-.53 2.67-1.28z"/></svg>
+            </div>
+            <h3>Universal DMG Package</h3>
+            <p class="download-desc">Universal macOS disk image for both Apple Silicon (M1/M2/M3/M4) and Intel Macs. Simply drag and drop into Applications.</p>
+            <div class="download-meta">
+              <span>Size: ~8.5 MB</span>
+              <span>Apple Silicon & Intel</span>
+            </div>
+            <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-macos-universal.dmg" class="btn btn-primary btn-block">
+              Download Universal DMG
+            </a>
+          </div>
+
+          <!-- macOS App Archive -->
+          <div class="download-card">
+            <div class="download-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3>Standalone App Archive</h3>
+            <p class="download-desc">Compressed `.app` bundle archive. Extract and run directly without mounting a virtual disk.</p>
+            <div class="download-meta">
+              <span>Size: ~7.8 MB</span>
+              <span>macOS 11.0+ (Big Sur or newer)</span>
+            </div>
+            <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-macos-universal.app.tar.gz" class="btn btn-secondary btn-block">
+              Download App Tarball (.tar.gz)
+            </a>
+          </div>
+        </div>
+
+        <div class="system-reqs">
+          <p><strong>macOS Requirements:</strong> macOS 11.0 (Big Sur) or newer. Universal binary natively optimized for Apple Silicon (ARM64) and Intel (x86_64).</p>
+        </div>
+      </div>
+
+      <!-- Platform Panel: Linux -->
+      <div class="platform-panel" id="panel-linux" role="tabpanel">
+        <div class="downloads-grid-three">
+          <!-- Universal AppImage -->
+          <div class="download-card featured">
+            <div class="card-badge">Most Flexible</div>
+            <div class="download-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12.002 0c-2.489 0-4.5 2.011-4.5 4.5 0 .285.03.563.083.832C5.03 6.386 3.5 8.784 3.5 11.5c0 1.968.804 3.755 2.11 5.048C4.542 17.702 3 19.78 3 22.2c0 .442.358.8.8.8h16.4c.442 0 .8-.358.8-.8 0-2.42-1.542-4.498-2.61-5.652 1.306-1.293 2.11-3.08 2.11-5.048 0-2.716-1.53-5.114-4.083-6.168.053-.269.083-.547.083-.832 0-2.489-2.011-4.5-4.5-4.5zm0 2c1.381 0 2.5 1.119 2.5 2.5 0 .341-.073.666-.201.963-.736-.3-1.503-.463-2.299-.463s-1.563.163-2.299.463c-.128-.297-.201-.622-.201-.963 0-1.381 1.119-2.5 2.5-2.5z"/></svg>
+            </div>
+            <h3>Universal AppImage</h3>
+            <p class="download-desc">Zero installation required. Runs directly on Ubuntu, Debian, Fedora, Arch Linux, Manjaro, openSUSE, and more.</p>
+            <div class="download-meta">
+              <span>Size: ~9.0 MB</span>
+              <span>Linux x86_64</span>
+            </div>
+            <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-linux-x86_64.AppImage" class="btn btn-primary btn-block">
+              Download AppImage
+            </a>
+          </div>
+
+          <!-- Debian / Ubuntu Package -->
+          <div class="download-card">
+            <div class="download-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Debian / Ubuntu (.deb)</h3>
+            <p class="download-desc">Native package installer for Ubuntu, Debian, Linux Mint, and Pop!_OS. Integrates with system application menu.</p>
+            <div class="download-meta">
+              <span>Size: ~3.1 MB</span>
+              <span>dpkg / apt</span>
+            </div>
+            <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-linux-amd64.deb" class="btn btn-secondary btn-block">
+              Download .deb Package
+            </a>
+          </div>
+
+          <!-- Linux Tarball -->
+          <div class="download-card">
+            <div class="download-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3>Binary Tarball (.tar.gz)</h3>
+            <p class="download-desc">Standalone binary archive. Unpack and run or integrate into custom game-dev pipelines.</p>
+            <div class="download-meta">
+              <span>Size: ~2.8 MB</span>
+              <span>Linux x86_64</span>
+            </div>
+            <a href="https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-linux-x86_64.tar.gz" class="btn btn-secondary btn-block">
+              Download Tarball (.tar.gz)
+            </a>
+          </div>
+        </div>
+
+        <div class="system-reqs">
+          <p><strong>Linux Requirements:</strong> Modern 64-bit Linux distribution (Ubuntu 20.04+, Fedora 36+, Debian 11+, Arch) with <code>WebKit2GTK 4.1</code>.</p>
+        </div>
       </div>
     </div>
   </section>

@@ -9,6 +9,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxClose = document.getElementById('lightboxClose');
   const lightboxBackdrop = document.getElementById('lightboxBackdrop');
 
+  // Platform Tab Switching (Windows / macOS / Linux)
+  const platformTabs = document.querySelectorAll('.platform-tab');
+  const platformPanels = document.querySelectorAll('.platform-panel');
+
+  const switchPlatform = (platform) => {
+    platformTabs.forEach(t => {
+      const isMatch = t.getAttribute('data-platform') === platform;
+      t.classList.toggle('active', isMatch);
+      t.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+    });
+
+    platformPanels.forEach(p => {
+      p.classList.toggle('active', p.id === `panel-${platform}`);
+    });
+  };
+
+  platformTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const platform = tab.getAttribute('data-platform');
+      switchPlatform(platform);
+    });
+  });
+
+  // OS Auto-Detection
+  const ua = (navigator.userAgent || navigator.platform || '').toLowerCase();
+  if (ua.includes('mac') || ua.includes('darwin')) {
+    switchPlatform('macos');
+  } else if (ua.includes('linux') && !ua.includes('android')) {
+    switchPlatform('linux');
+  } else {
+    switchPlatform('windows');
+  }
+
   // Tab switching
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {

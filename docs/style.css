@@ -589,12 +589,104 @@ body {
   background: rgba(255, 255, 255, 0.02);
 }
 
-/* Downloads Grid */
+/* Downloads Platform Tabs */
+.platform-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.platform-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.platform-tab:hover {
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.platform-tab.active {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.05) 100%);
+  border-color: var(--emerald-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 20px var(--emerald-glow);
+}
+
+.platform-tab svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.platform-tab.active svg {
+  color: var(--emerald-primary);
+  transform: scale(1.08);
+}
+
+.tab-badge {
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.platform-tab.active .tab-badge {
+  background: rgba(16, 185, 129, 0.25);
+  color: #34d399;
+}
+
+/* Platform Panels */
+.platform-panel {
+  display: none;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.platform-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Downloads Grids */
 .downloads-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   margin-bottom: 30px;
+}
+
+.downloads-grid-wide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+}
+
+.downloads-grid-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
 }
 
 .download-card {
@@ -792,6 +884,7 @@ body {
   .hero-title { font-size: 2.8rem; }
   .features-grid { grid-template-columns: repeat(2, 1fr); }
   .downloads-grid { grid-template-columns: repeat(2, 1fr); }
+  .downloads-grid-three { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -801,6 +894,8 @@ body {
   .hero-subtitle { font-size: 1rem; }
   .features-grid { grid-template-columns: 1fr; }
   .downloads-grid { grid-template-columns: 1fr; }
+  .downloads-grid-wide { grid-template-columns: 1fr; }
+  .downloads-grid-three { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; }
   .footer-container { flex-direction: column; text-align: center; }
   .footer-links { flex-wrap: wrap; justify-content: center; }
