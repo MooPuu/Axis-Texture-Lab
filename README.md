@@ -6,12 +6,12 @@
 
 **Next-Gen Native PBR Texture, Normal Map & Procedural Terrain Suite**
 
-[![Platform: Windows](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D6?logo=windows&logoColor=white)](https://github.com)
+[![Platform: Windows](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D6?logo=windows&logoColor=white)](https://github.com/MooPuu/axis-texture-lab)
 [![Built with: Rust](https://img.shields.io/badge/Backend-Rust-DEA584?logo=rust&logoColor=white)](https://www.rust-lang.org)
 [![Framework: Tauri v2](https://img.shields.io/badge/Framework-Tauri%20v2-24C8D8?logo=tauri&logoColor=white)](https://tauri.app)
 [![3D Engine: Three.js](https://img.shields.io/badge/3D%20Engine-Three.js-black?logo=three.js&logoColor=white)](https://threejs.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version: 2.0.0](https://img.shields.io/badge/Release-v2.0.0-success.svg)](https://github.com)
+[![Version: 2.0.0](https://img.shields.io/badge/Release-v2.0.0-success.svg)](https://github.com/MooPuu/axis-texture-lab/releases/tag/v2.0.0)
 
 <p align="center">
   <img src="Axis%20Texture%20Lab%20Icon.png" alt="Axis Texture Lab Icon" width="128" />
@@ -64,14 +64,14 @@ Transform any 2D diffuse/albedo texture into a complete, game-ready PBR material
 
 ## 🚀 Downloads & Installation
 
-Pre-built binaries for **Windows 10 / 11 (64-bit)** are available on the [Releases](https://github.com) page:
+Pre-built binaries for **Windows 10 / 11 (64-bit)** are available on the [v2.0.0 Release Page](https://github.com/MooPuu/axis-texture-lab/releases/tag/v2.0.0):
 
-| Package | Description | Size |
-|---|---|---|
-| **`AxisTextureLab.exe`** | **Portable Standalone Executable** — Zero installation required. Run directly. | ~9.2 MB |
-| **`AxisTextureLab-v2.0.0-windows-portable.zip`** | **Portable Zip Package** — Includes executable, high-res icon, and quick-start docs. | ~2.9 MB |
-| **`Axis Texture Lab_2.0.0_x64-setup.exe`** | **Standard Windows Installer (NSIS)** — Desktop & Start Menu shortcuts, clean uninstaller. | ~2.2 MB |
-| **`Axis Texture Lab_2.0.0_x64_en-US.msi`** | **Enterprise MSI Package** — System administrator and enterprise deployment. | ~3.2 MB |
+| Package | Description | Download | Size |
+|---|---|---|---|
+| **Standalone Portable** | Zero installation required. Run directly. | [**AxisTextureLab-v2.0.0-windows-x64.exe**](https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-windows-x64.exe) | ~9.2 MB |
+| **Portable Zip Package** | Includes executable, icon, and quick-start docs. | [**AxisTextureLab-v2.0.0-windows-portable.zip**](https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-windows-portable.zip) | ~2.9 MB |
+| **Standard Installer (NSIS)** | Desktop & Start Menu shortcuts, clean uninstaller. | [**AxisTextureLab-v2.0.0-setup.exe**](https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-setup.exe) | ~2.2 MB |
+| **Enterprise Installer (MSI)** | Windows Installer package. | [**AxisTextureLab-v2.0.0-x64.msi**](https://github.com/MooPuu/axis-texture-lab/releases/download/v2.0.0/AxisTextureLab-v2.0.0-x64.msi) | ~3.3 MB |
 
 > **Prerequisite:** Microsoft Edge WebView2 Runtime (preinstalled on Windows 10 version 2004+ and all Windows 11 systems).
 
